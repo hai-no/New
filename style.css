@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  z-index: 2;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.nav-logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin: 0 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.nav-menu a:hover {
+  color: blue;
+}
+
+.navigasi {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-select {
+  display: flex;
+  height: 50px;
+  padding: 14px 5px;
+  cursor: pointer;
+}
+
+.navigasi.active .arrow i {
+  transform: rotate(-180deg);
+}
+
+.dropdown-section {
+  position: absolute;
+  padding: 10px 0;
+  margin-top: 250px;
+  display: none;
+  width: 100%;
+}
+
+.navigasi.active .dropdown-section {
+  display: block;
+}
+
+.dropdown-section .dropdown {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 3px;
+  border-radius: 8px;
+}
+
+.dropdown-section .dropdown:hover {
+  background: #f0f0f0;
+}
+
+.home {
+  background-image: url(Images/background.jpg);
+  display: flex;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  z-index: 1;
+}
+
+.about,
+.contact {
+  padding: 20px;
+  margin: 40px;
+}
+
+.about h2,
+.contact h2 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+.row-contact {
+  padding: 30px;
+  /* width: 90%; */
+  background-color: #f0f0f0;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.row-contact h2 {
+  margin-bottom: 30px;
+}
+
+.row-contact p {
+  margin-bottom: 10px;
+}
+
+.kontak-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontak-form label {
+  text-align: left;
+}
+
+.kontak-form input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.centang-kotak {
+  display: flex;
+  align-items: center;
+}
+
+.centang-kotak input[type="checkbox"] {
+  margin-right: 50px;
+}
