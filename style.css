@@ -9,13 +9,12 @@ body {
 }
 
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 0;
-  background-color: #f0f0f0;
-  z-index: 2;
+  padding: 5px 0;
+  z-index: 1;
 }
 
 .navbar-nav {
@@ -94,71 +93,178 @@ body {
 .home {
   background-image: url(Images/background.jpg);
   display: flex;
-  min-height: 100vh;
+  min-height: 60vh;
   background-size: cover;
   background-position: center;
   position: relative;
   align-items: center;
-  z-index: 1;
-}
-
-.about,
-.contact {
-  padding: 20px;
-  margin: 40px;
-}
-
-.about h2,
-.contact h2 {
+  justify-content: center;
+  color: white;
   text-align: center;
 }
 
-.row {
+.beranda h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.beranda p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cta-button:hover,
+.destbutton:hover,
+.contact button:hover {
+  background: #0056b3;
+}
+
+.about,
+.wisata {
+  padding: 0.3rem 12rem;
+}
+
+.about-img img {
+  max-width: 100%;
+  height: auto;
+  width: 60rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about h2,
+.wisata h2,
+.contact h2 {
+  padding: 15px 0;
+}
+
+.about p {
+  /* padding: ;   */
+}
+
+.row,
+.row-wisata2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
 }
 
-.about-text {
-  text-align: justify;
-}
-
-.row-contact {
-  padding: 30px;
-  /* width: 90%; */
-  background-color: #f0f0f0;
-  max-width: 500px;
-  text-align: justify;
-}
-
-.row-contact h2 {
-  margin-bottom: 30px;
-}
-
-.row-contact p {
-  margin-bottom: 10px;
-}
-
-.kontak-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.kontak-form label {
-  text-align: left;
-}
-
-.kontak-form input {
-  padding: 10px;
-  width: 100%;
-  border-radius: 8px;
-}
-
-.centang-kotak {
+.row-wisata1,
+.row-wisata3 {
   display: flex;
   align-items: center;
 }
 
-.centang-kotak input[type="checkbox"] {
-  margin-right: 50px;
+.malang p,
+.malang h2 {
+  text-align: justify;
+  padding: 0.5rem 10rem;
+}
+
+.backgmalang {
+  background-image: url(Images/background.jpg);
+  display: flex;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutmalan,
+.contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.destinasi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.imgmalan {
+  width: 30%;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.imgmalan img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dest {
+  padding-top: 3rem;
+}
+
+.dest h2 {
+  text-align: center;
+}
+
+.dest p {
+  text-align: justify;
+  padding: 10px;
+}
+
+.destbutton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #192a45;
+  color: #fff;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.footers {
+  margin: 0 auto;
+}
+
+.footlinks {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footlinks li {
+  margin: 0 15px;
+}
+
+.footlinks a {
+  text-decoration: none;
+  color: #fff;
 }
