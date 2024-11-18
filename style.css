@@ -132,6 +132,7 @@ body {
 .about,
 .wisata {
   padding: 0.3rem 12rem;
+  text-align: justify;
 }
 
 .about-img img {
@@ -152,6 +153,10 @@ body {
   /* padding: ;   */
 }
 
+.wisata {
+  padding-top: 50px;
+}
+
 .row,
 .row-wisata2 {
   display: flex;
@@ -165,6 +170,22 @@ body {
   align-items: center;
 }
 
+.wisata-img img {
+  max-width: 100%;
+  height: auto;
+  width: 130rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.wisata-text {
+  padding-left: 50px;
+}
+
+.wisata-text2 {
+  padding-right: 50px;
+}
+
 .malang p,
 .malang h2 {
   text-align: justify;
@@ -172,7 +193,7 @@ body {
 }
 
 .backgmalang {
-  background-image: url(Images/background.jpg);
+  background-image: url(Images/Bromo1.jpg);
   display: flex;
   min-height: 60vh;
   background-size: cover;
