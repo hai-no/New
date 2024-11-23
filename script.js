@@ -3,6 +3,9 @@ const toggleBtn = document.getElementById("toggle-btn");
 // const jamElement = document.getElementById("jam");
 const liveTime = document.getElementById("live-time");
 
+let currentSlide = 0;
+const slides = document.querySelectorAll(".testimonial");
+
 // // Toggle sidebar
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
@@ -44,3 +47,9 @@ dropdownMenus.forEach((dropdownMenu) => {
     });
   });
 });
+
+function showTestimonial(direction) {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + direction + slides.length) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
