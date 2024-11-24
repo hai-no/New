@@ -1,17 +1,25 @@
 const sidebar = document.getElementById("sidebar");
 const toggleBtn = document.getElementById("toggle-btn");
-// const jamElement = document.getElementById("jam");
 const liveTime = document.getElementById("live-time");
 
-let currentSlide = 0;
-const slides = document.querySelectorAll(".testimonial");
+// Testimonial slider
+const testimonialSlides = document.querySelectorAll(".testimonial");
+let currentTestimonialSlide = 0;
 
-// // Toggle sidebar
+// Galeri
+const galleryContainer = document.querySelector(".gallery-container");
+const leftButton = document.querySelector(".left-button");
+const rightButton = document.querySelector(".right-button");
+
+let currentSlide = 0;
+const slideWidth = document.querySelector(".gallery-slider").clientWidth;
+
+// Sidebar toggle
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
 
-// // update jam
+// Update live time for Jakarta timezone
 function updateLiveTime() {
   const jakartaTime = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Jakarta",
@@ -23,33 +31,68 @@ function updateLiveTime() {
   liveTime.textContent = `Jakarta: ${jakartaTime}`;
 }
 
-// // Refresh time every second
+// Refresh time every second
 setInterval(updateLiveTime, 1000);
-
 updateLiveTime();
 
-const dropdownMenus = document.querySelectorAll(".navigasi");
+// Testimonial Slider Controls
+function showTestimonial(direction) {
+  testimonialSlides[currentTestimonialSlide].classList.remove("active");
+  currentTestimonialSlide =
+    (currentTestimonialSlide + direction + testimonialSlides.length) %
+    testimonialSlides.length;
+  testimonialSlides[currentTestimonialSlide].classList.add("active");
+}
 
-dropdownMenus.forEach((dropdownMenu) => {
-  const navSelect = dropdownMenu.querySelector(".nav-select"),
-    dropdownSection = dropdownMenu.querySelectorAll(".dropdown"),
-    nav_text = dropdownMenu.querySelector(".nav-text");
-
-  navSelect.addEventListener("click", () => {
-    dropdownMenu.classList.toggle("active");
-  });
-
-  dropdownSection.forEach((dropdown) => {
-    dropdown.addEventListener("click", () => {
-      let selectedDropdown = dropdown.querySelector(".drop-text").innerText;
-      nav_text.innerText = selectedDropdown;
-      dropdownMenu.classList.remove("active");
-    });
-  });
+document.querySelector(".prev").addEventListener("click", () => {
+  showTestimonial(-1);
+});
+document.querySelector(".next").addEventListener("click", () => {
+  showTestimonial(1);
 });
 
-function showTestimonial(direction) {
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + direction + slides.length) % slides.length;
-  slides[currentSlide].classList.add("active");
+// Gallery Slider Controls
+// function updateGalleryPosition() {
+//   galleryContainer.style.transform = `translateX(-${
+//     currentGallerySlide * slideWidth
+//   }px)`;
+//   galleryContainer.style.transition = "transform 0.4s ease-in-out";
+// }
+
+// galleryRightButton.addEventListener("click", () => {
+//   currentGallerySlide++;
+//   if (currentGallerySlide >= galleryItems.length) {
+//     currentGallerySlide = 0; // Loop back to the first slide
+//   }
+//   updateGalleryPosition();
+// });
+
+// galleryLeftButton.addEventListener("click", () => {
+//   currentGallerySlide--;
+//   if (currentGallerySlide < 0) {
+//     currentGallerySlide = galleryItems.length - 1; // Loop to the last slide
+//   }
+//   updateGalleryPosition();
+// });
+
+rightButton.addEventListener("click", () => {
+  currentSlide++;
+  if (currentSlide >= galleryContainer.children.length) {
+    currentSlide = 0; // Loop back to the first slide
+  }
+  updateGalleryPosition();
+});
+
+leftButton.addEventListener("click", () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = galleryContainer.children.length - 1; // Loop to the last slide
+  }
+  updateGalleryPosition();
+});
+
+function updateGalleryPosition() {
+  galleryContainer.style.transform = `translateX(-${
+    currentSlide * slideWidth
+  }px)`;
 }
