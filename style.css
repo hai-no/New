@@ -302,10 +302,9 @@ body {
   object-fit: cover;
 }
 
-.wisata-text,
-.wisata-text2 {
+.wisata-text {
   flex: 1;
-  text-align: left;
+  text-align: justify;
 }
 
 .wisata-text {
@@ -401,7 +400,7 @@ details summary::after {
   color: #708090;
   font-weight: normal;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 details[open] summary::after {
@@ -418,6 +417,7 @@ details[open] > p {
 
 details:hover summary::after {
   color: #2f4f4f;
+  text-decoration: underline;
 }
 
 /* Galleri */
