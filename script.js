@@ -45,16 +45,16 @@ const rightButton = document.querySelector(".right-button");
 let currentSlide = 0;
 const slideWidth = document.querySelector(".gallery-slider").clientWidth;
 
-// Update live time for Jakarta timezone
+// Jam Live
 function updateLiveTime() {
-  const jakartaTime = new Date().toLocaleString("en-US", {
+  const bogorTime = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Jakarta",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
     hour12: false,
   });
-  liveTime.textContent = `Jakarta: ${jakartaTime}`;
+  liveTime.textContent = `Bogor: ${bogorTime}`;
 }
 
 // Refresh time every second
