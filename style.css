@@ -463,7 +463,16 @@ body {
   justify-content: center;
 }
 
-.aboutmalan,
+.cta-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
 .contact {
   padding: 2rem;
   text-align: center;
