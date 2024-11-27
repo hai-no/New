@@ -6,6 +6,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -56,6 +57,7 @@ body {
   cursor: pointer;
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -95,6 +97,7 @@ body {
   padding: 5px;
 }
 
+/* Jam */
 .live-time {
   font-size: 18px;
   font-weight: bold;
@@ -105,7 +108,7 @@ body {
   border-radius: 8px;
 }
 
-/* Hero Section */
+/* Beranda */
 .hero {
   background: linear-gradient(
     to bottom,
@@ -317,7 +320,7 @@ body {
   flex-direction: row-reverse;
 }
 
-/* CTA Section */
+/* CTA  */
 .cta-section {
   background: url("Images/Bromoback.jpg") center/cover no-repeat;
   color: #fff;
@@ -337,7 +340,7 @@ body {
   margin: 0;
 }
 
-/* Destinasi Section */
+/* Destinasi  */
 
 .destinasi {
   display: flex;
@@ -417,23 +420,22 @@ details:hover summary::after {
   color: #2f4f4f;
 }
 
-/* Gallery Section */
+/* Galleri */
 .gallery-section {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #f0f0f0; */
-  padding: 20px; /* Space around the gallery */
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .gallery-slider {
   position: relative;
-  width: 80%; /* Make it almost fullscreen */
+  width: 80%;
   max-width: 1200px;
-  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  aspect-ratio: 16 / 9;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -632,11 +634,11 @@ details:hover summary::after {
 
 @media screen and (max-width: 768px) {
   .nav-menu {
-    display: none; /* Hide navbar menu on small screens */
+    display: none;
   }
 
   .toggle-btn {
-    display: block; /* Show toggle button */
+    display: block;
   }
 
   .hero {
@@ -759,22 +761,22 @@ details:hover summary::after {
 
   .cta-section p,
   .contact p {
-    font-size: 1em; /* Scale down paragraph font size */
+    font-size: 1em;
   }
 
   .gallery-slider {
-    width: 100%; /* Adjust width for smaller screens */
-    aspect-ratio: 3 / 4; /* More boxy for mobile */
+    width: 100%;
+    aspect-ratio: 3 / 4;
   }
 }
 
 @media screen and (max-width: 480px) {
   .nav-menu {
-    display: none; /* Hide navbar menu on small screens */
+    display: none;
   }
 
   .toggle-btn {
-    display: block; /* Show toggle button */
+    display: block;
   }
 
   .hero {

@@ -3,37 +3,35 @@ const toggleBtn = document.getElementById("toggle-btn");
 const navbar = document.querySelector(".navbar");
 const liveTime = document.getElementById("live-time");
 
-// scroll nav
+// scroll navbar
 let lastScrollTop = 0;
 
-// Sidebar toggle
+// Sidebar tombol
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
 
-// Close sidebar when clicking outside (optional)
+// Tutup sidebar bila diklik dimana saja
 document.addEventListener("click", (event) => {
   if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
     sidebar.classList.remove("active");
   }
 });
 
-// Hide/Show navbar on scroll
+// Sembunyikan navbar ketika scroll
 window.addEventListener("scroll", () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Scroll down
-    navbar.style.top = "-60px"; // Adjust as needed to hide navbar
+    navbar.style.top = "-60px";
   } else {
-    // Scroll up
     navbar.style.top = "0";
   }
 
   lastScrollTop = scrollTop;
 });
 
-// Testimonial slider
+// Testimoni slide
 const testimonialSlides = document.querySelectorAll(".testimonial");
 let currentTestimonialSlide = 0;
 
@@ -57,11 +55,11 @@ function updateLiveTime() {
   liveTime.textContent = `Bogor: ${bogorTime}`;
 }
 
-// Refresh time every second
+// Refresh jam
 setInterval(updateLiveTime, 1000);
 updateLiveTime();
 
-// Testimonial Slider Controls
+// Testimoni Slid control
 function showTestimonial(direction) {
   testimonialSlides[currentTestimonialSlide].classList.remove("active");
   currentTestimonialSlide =
@@ -80,7 +78,7 @@ document.querySelector(".next").addEventListener("click", () => {
 rightButton.addEventListener("click", () => {
   currentSlide++;
   if (currentSlide >= galleryContainer.children.length) {
-    currentSlide = 0; // Loop back to the first slide
+    currentSlide = 0;
   }
   updateGalleryPosition();
 });
@@ -88,7 +86,7 @@ rightButton.addEventListener("click", () => {
 leftButton.addEventListener("click", () => {
   currentSlide--;
   if (currentSlide < 0) {
-    currentSlide = galleryContainer.children.length - 1; // Loop to the last slide
+    currentSlide = galleryContainer.children.length - 1;
   }
   updateGalleryPosition();
 });
